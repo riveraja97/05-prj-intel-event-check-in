@@ -1,188 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Intel: Sustainability Throughout the Ages & Summit Check-In</title>
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-
-  <!-- Header / Hero Section -->
-  <header class="hero">
-    <div class="hero-content">
-      <img src="img/intel-logo.svg" alt="Intel Logo" class="intel-logo" />
-      <h1>Sustainability Throughout the Ages</h1>
-      <div class="hero-divider"></div>
-      <p>
-        <i class="fas fa-leaf"></i> Explore Intel's journey through time and join our Summit Check-In!
-      </p>
-    </div>
-  </header>
-
-  <!-- Timeline Cards Section -->
-  <section class="timeline">
-    <div class="card">
-      <img src="img/1968.png" alt="Intel Founded" class="card-img">
-      <h2>1968</h2>
-      <h3>Intel Founded</h3>
-      <div class="card-info">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intel: Sustainability Throughout the Ages & Summit Check-In</title>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header / Hero Section -->
+    <header class="hero">
+      <div class="hero-content">
+        <img src="img/intel-logo.svg" alt="Intel Logo" class="intel-logo" />
+        <h1>Sustainability Throughout the Ages</h1>
+        <div class="hero-divider"></div>
         <p>
-          Robert Noyce and Gordon Moore rename NM Electronics to Intel Corporation, laying the foundation for decades of innovation.
+          <i class="fas fa-leaf"></i> Explore Intel's journey through time and
+          join our Summit Check-In!
         </p>
       </div>
-    </div>
+    </header>
 
-    <div class="card">
-      <img src="img/1971.png" alt="First Microprocessor" class="card-img">
-      <h2>1971</h2>
-      <h3>First Microprocessor</h3>
-      <div class="card-info">
-        <p>
-          Intel debuts the 4004, the world's first commercial microprocessor, igniting the computing revolution.
-        </p>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="img/1978.png" alt="8086 Processor" class="card-img">
-      <h2>1978</h2>
-      <h3>8086 Processor</h3>
-      <div class="card-info">
-        <p>
-          Launch of the 8086 processor, establishing the x86 architecture that drives countless PCs and servers today.
-        </p>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="img/1985.png" alt="386 Processor" class="card-img">
-      <h2>1985</h2>
-      <h3>386 Processor</h3>
-      <div class="card-info">
-        <p>
-          Intel introduces the 386 processor with 32-bit architecture, enabling high performance and multitasking PCs.
-        </p>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="img/2006.png" alt="2006 Peak GHG Emissions" class="card-img">
-      <h2>2006</h2>
-      <h3>Peak GHG Emissions</h3>
-      <div class="card-info">
-        <p>
-          Intel reaches its highest greenhouse gas emissions; invests in renewable energy and efficiency to reverse the trend.
-        </p>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="img/2020.png" alt="2020 RISE Strategy" class="card-img">
-      <h2>2020</h2>
-      <h3>RISE Strategy</h3>
-      <div class="card-info">
-        <p>
-          Launches RISE (Responsible, Inclusive, Sustainable, Enabling) strategy with 2030 goals.
-        </p>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="img/2022.png" alt="2022 Net-Zero By 2040" class="card-img">
-      <h2>2022</h2>
-      <h3>Net-Zero By 2040</h3>
-      <div class="card-info">
-        <p>
-          Intel commits to achieve net-zero greenhouse gas emissions across global operations by 2040.
-        </p>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="img/2023.png" alt="2023 Renewable Electricity" class="card-img">
-      <h2>2023</h2>
-      <h3>Renewable Electricity</h3>
-      <div class="card-info">
-        <p>
-          Achieves 99% renewable electricity usage worldwide, reducing carbon emissions.
-        </p>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="img/2024.png" alt="2024 Sustainability Summit" class="card-img">
-      <h2>2024</h2>
-      <h3>Sustainability Summit</h3>
-      <div class="card-info">
-        <p>
-          Intel hosts first Sustainability Summit, uniting suppliers, officials, and leaders to collaborate on sustainable semiconductor manufacturing.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <p class="timeline-note">Scroll to view timeline | Hover over cards to learn more! 💙</p>
-
-  <!-- Attendance Tracker Section -->
-  <section class="attendance-tracker">
-    <div class="attendance-header">
-      <i class="fas fa-users"></i> Attendance: <span id="attendeeCount">0</span>/50
-    </div>
-    <div class="progress-container">
-      <div id="progressBar" class="progress-bar"></div>
-    </div>
-  </section>
-
-  <div class="container">
-    <!-- Greeting message -->
-    <p id="greeting"></p>
-
-    <!-- Check-in Form -->
-    <form class="check-in" id="checkInForm">
-      <label for="attendeeName" class="form-label">Attendee Check-In</label>
-      <div class="form-group">
-        <div class="input-wrapper">
-          <input type="text" id="attendeeName" name="attendeeName" placeholder="Enter name..." required />
-          <select id="teamSelect" name="team" required>
-            <option value="" disabled selected>Select Team...</option>
-            <option value="water">🌊 Team Water Wise</option>
-            <option value="zero">🌿 Team Net Zero</option>
-            <option value="power">⚡ Team Renewables</option>
-          </select>
-        </div>
-        <button type="submit" id="checkInBtn"><i class="fas fa-user-check"></i> Check In</button>
-      </div>
-    </form>
-
-    <!-- Team Stats -->
-    <div class="team-stats">
-      <h3>Team Attendance</h3>
-      <div class="teams-grid">
-        <div class="team-card water">
-          <span class="team-name">🌊 Team Water Wise</span>
-          <span class="team-count" id="waterCount">0</span>
-        </div>
-        <div class="team-card zero">
-          <span class="team-name">🌿 Team Net Zero</span>
-          <span class="team-count" id="zeroCount">0</span>
-        </div>
-        <div class="team-card power">
-          <span class="team-name">⚡ Team Renewables</span>
-          <span class="team-count" id="powerCount">0</span>
+    <!-- Timeline Cards Section -->
+    <section class="timeline">
+      <div class="card">
+        <img src="img/1968.png" alt="Intel Founded" class="card-img" />
+        <h2>1968</h2>
+        <h3>Intel Founded</h3>
+        <div class="card-info">
+          <p>
+            Robert Noyce and Gordon Moore rename NM Electronics to Intel
+            Corporation, laying the foundation for decades of innovation.
+          </p>
         </div>
       </div>
+
+      <div class="card">
+        <img src="img/1971.png" alt="First Microprocessor" class="card-img" />
+        <h2>1971</h2>
+        <h3>First Microprocessor</h3>
+        <div class="card-info">
+          <p>
+            Intel debuts the 4004, the world's first commercial microprocessor,
+            igniting the computing revolution.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/1978.png" alt="8086 Processor" class="card-img" />
+        <h2>1978</h2>
+        <h3>8086 Processor</h3>
+        <div class="card-info">
+          <p>
+            Launch of the 8086 processor, establishing the x86 architecture that
+            drives countless PCs and servers today.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/1985.png" alt="386 Processor" class="card-img" />
+        <h2>1985</h2>
+        <h3>386 Processor</h3>
+        <div class="card-info">
+          <p>
+            Intel introduces the 386 processor with 32-bit architecture,
+            enabling high performance and multitasking PCs.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img
+          src="img/2006.png"
+          alt="2006 Peak GHG Emissions"
+          class="card-img"
+        />
+        <h2>2006</h2>
+        <h3>Peak GHG Emissions</h3>
+        <div class="card-info">
+          <p>
+            Intel reaches its highest greenhouse gas emissions; invests in
+            renewable energy and efficiency to reverse the trend.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/2020.png" alt="2020 RISE Strategy" class="card-img" />
+        <h2>2020</h2>
+        <h3>RISE Strategy</h3>
+        <div class="card-info">
+          <p>
+            Launches RISE (Responsible, Inclusive, Sustainable, Enabling)
+            strategy with 2030 goals.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/2022.png" alt="2022 Net-Zero By 2040" class="card-img" />
+        <h2>2022</h2>
+        <h3>Net-Zero By 2040</h3>
+        <div class="card-info">
+          <p>
+            Intel commits to achieve net-zero greenhouse gas emissions across
+            global operations by 2040.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img
+          src="img/2023.png"
+          alt="2023 Renewable Electricity"
+          class="card-img"
+        />
+        <h2>2023</h2>
+        <h3>Renewable Electricity</h3>
+        <div class="card-info">
+          <p>
+            Achieves 99% renewable electricity usage worldwide, reducing carbon
+            emissions.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img
+          src="img/2024.png"
+          alt="2024 Sustainability Summit"
+          class="card-img"
+        />
+        <h2>2024</h2>
+        <h3>Sustainability Summit</h3>
+        <div class="card-info">
+          <p>
+            Intel hosts first Sustainability Summit, uniting suppliers,
+            officials, and leaders to collaborate on sustainable semiconductor
+            manufacturing.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <p class="timeline-note">
+      Scroll to view timeline | Hover over cards to learn more! 💙
+    </p>
+
+    <!-- Attendance Tracker Section -->
+    <section class="attendance-tracker">
+      <div class="attendance-header">
+        <i class="fas fa-users"></i> Attendance:
+        <span id="attendeeCount">0</span>/50
+      </div>
+      <div class="progress-container">
+        <div id="progressBar" class="progress-bar"></div>
+      </div>
+    </section>
+
+    <div class="container">
+      <!-- Greeting message -->
+      <p id="greeting"></p>
+
+      <!-- Check-in Form -->
+      <form class="check-in" id="checkInForm">
+        <label for="attendeeName" class="form-label">Attendee Check-In</label>
+        <div class="form-group">
+          <div class="input-wrapper">
+            <input
+              type="text"
+              id="attendeeName"
+              name="attendeeName"
+              placeholder="Enter name..."
+              required
+            />
+            <select id="teamSelect" name="team" required>
+              <option value="" disabled selected>Select Team...</option>
+              <option value="water">🌊 Team Water Wise</option>
+              <option value="zero">🌿 Team Net Zero</option>
+              <option value="power">⚡ Team Renewables</option>
+            </select>
+          </div>
+          <button type="submit" id="checkInBtn">
+            <i class="fas fa-user-check"></i> Check In
+          </button>
+        </div>
+      </form>
+
+      <!-- Team Stats -->
+      <div class="team-stats">
+        <h3>Team Attendance</h3>
+        <div class="teams-grid">
+          <div class="team-card water">
+            <span class="team-name">🌊 Team Water Wise</span>
+            <span class="team-count" id="waterCount">0</span>
+          </div>
+          <div class="team-card zero">
+            <span class="team-name">🌿 Team Net Zero</span>
+            <span class="team-count" id="zeroCount">0</span>
+          </div>
+          <div class="team-card power">
+            <span class="team-name">⚡ Team Renewables</span>
+            <span class="team-count" id="powerCount">0</span>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
 
-  <!-- Footer -->
-  <footer class="footer">
-    &copy; 2025 Intel • All Rights Reserved
-  </footer>
+    <!-- Footer -->
+    <footer class="footer">&copy; 2025 Intel • All Rights Reserved</footer>
 
-  <!-- JS Script -->
-  <script src="script.js"></script>
-</body>
+    <!-- JS Script -->
+    <script src="script.js"></script>
+  </body>
 </html>
